@@ -1,5 +1,8 @@
 import random
 
+player_score = 0
+bot_score = 0
+
 def get_user_choice():
     while True:
         print("Выберите действие:")
@@ -34,8 +37,6 @@ def determine_winner(player_choice, bot_choice):
         return "Я победил!"
 
 print("Добро пожаловать в игру камень ножницы бумага!")
-player_score = 0
-bot_score = 0
 
 for _ in range(3):
     player_choice = get_user_choice()
@@ -46,12 +47,15 @@ for _ in range(3):
     result = determine_winner(player_choice, bot_choice)
     print(result)
 
-    if "победил" in result:
-        player_score += 1
+    if "Я победил" in result:
+        bot_score += 1
     elif "Ничья" in result:
         pass
     else:
-        bot_score += 1
+        player_score += 1
+    
+    print("Робот: ", bot_score)
+    print("Человек: ", player_score)
 
 if player_score == bot_score:
     print("Ничья по итогам трех раундов!")

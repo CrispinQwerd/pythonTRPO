@@ -1,9 +1,8 @@
 import turtle 
-import random 
 
 t = turtle.Turtle()
 t.pensize(3)
-turtle.speed(200) 
+turtle.speed(500) 
 t.shape("turtle")
 r=int(input("Введите радиус первого круга: ->  ")) 
 m = 4

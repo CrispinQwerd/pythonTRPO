@@ -1,2 +1,2 @@
 name = str(input("Введите ваше имя: "))
-print("Добрый день",name)
+print(f"Добрый день",name)

@@ -1,6 +1,6 @@
 import turtle 
 
-t = turtle.Turtle()
+t = turtle
 t.pensize(3)
 turtle.speed(500) 
 t.shape("turtle")
